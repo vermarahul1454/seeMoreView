@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SeeMoreView" customModule="SeeMorePoc" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="Afl-l2-Lgm" id="zIL-fp-ZsN"/>
+                <outlet property="contentLabel" destination="cTG-eP-0fw" id="cYY-jn-Qp3"/>
+                <outlet property="seeMoreButton" destination="6Gy-n1-qt2" id="UCY-ce-BQW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="492" height="168"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Afl-l2-Lgm">
+                    <rect key="frame" x="0.0" y="59" width="492" height="75"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTG-eP-0fw">
+                            <rect key="frame" x="0.0" y="0.0" width="492" height="75"/>
+                            <string key="text">To the two friends, the treehouse was much more than a treehouse. It was a sanctuary away from the other kids where they could be themselves without being teased or bullied. It was their secret fortress hidden high in the branches of a huge oak that only they knew existed. At least that is what they thought. They were more than a little annoyed when their two younger sisters decided to turn the treehouse into a princess castle by painting the inside pink and putting glitter everywhere.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Gy-n1-qt2">
+                            <rect key="frame" x="416" y="54" width="76" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <inset key="contentEdgeInsets" minX="28" minY="0.0" maxX="8" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="More">
+                                <color key="titleColor" systemColor="tintColor"/>
+                            </state>
+                            <connections>
+                                <action selector="seeMoreButtonTapped:" destination="-1" eventType="touchUpInside" id="gQM-TI-PlK"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="cTG-eP-0fw" firstAttribute="leading" secondItem="Afl-l2-Lgm" secondAttribute="leading" id="E5L-iJ-nx7"/>
+                        <constraint firstAttribute="bottom" secondItem="6Gy-n1-qt2" secondAttribute="bottom" id="L4Q-1G-wxH"/>
+                        <constraint firstAttribute="trailing" secondItem="cTG-eP-0fw" secondAttribute="trailing" id="LlI-C9-K5X"/>
+                        <constraint firstItem="cTG-eP-0fw" firstAttribute="top" secondItem="Afl-l2-Lgm" secondAttribute="top" id="n7Q-xt-mf3"/>
+                        <constraint firstAttribute="bottom" secondItem="cTG-eP-0fw" secondAttribute="bottom" id="oWU-cA-SRS"/>
+                        <constraint firstAttribute="trailing" secondItem="6Gy-n1-qt2" secondAttribute="trailing" id="yHK-VA-bb8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Afl-l2-Lgm" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="EZQ-2f-1WF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Afl-l2-Lgm" secondAttribute="bottom" id="d6g-hA-kuy"/>
+                <constraint firstItem="Afl-l2-Lgm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gm5-gx-jvH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Afl-l2-Lgm" secondAttribute="trailing" id="quw-X8-yEx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="44.274809160305338" y="185.21126760563382"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

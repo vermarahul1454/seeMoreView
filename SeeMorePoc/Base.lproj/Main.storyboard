@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PXn-aR-ASH">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SeeMore List View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SeeMorePoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbA-1m-kG7" customClass="SeeMoreView" customModule="SeeMorePoc" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="103" width="393" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="250" constant="128" id="PKU-c9-gbp"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZ0-wc-F1P">
+                                <rect key="frame" x="0.0" y="247" width="393" height="6"/>
+                                <color key="backgroundColor" systemColor="tintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="6" id="480-vB-kgX"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Mag-Y5-oOU">
+                                <rect key="frame" x="0.0" y="269" width="393" height="549"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" systemColor="tintColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SeeMoreTableViewCell" id="dia-ab-FdS" customClass="SeeMoreTableViewCell" customModule="SeeMorePoc" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="8.3333330154418945"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dia-ab-FdS" id="mhu-GE-OOC">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="8.3333330154418945"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bmf-xj-uKT" customClass="SeeMoreView" customModule="SeeMorePoc" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="4" width="393" height="0.33333333333333304"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Bmf-xj-uKT" firstAttribute="leading" secondItem="mhu-GE-OOC" secondAttribute="leading" id="gav-6j-o8d"/>
+                                                <constraint firstAttribute="trailing" secondItem="Bmf-xj-uKT" secondAttribute="trailing" id="jP9-Wh-3j0"/>
+                                                <constraint firstAttribute="bottom" secondItem="Bmf-xj-uKT" secondAttribute="bottom" constant="4" id="wNW-Zl-Oyd"/>
+                                                <constraint firstItem="Bmf-xj-uKT" firstAttribute="top" secondItem="mhu-GE-OOC" secondAttribute="top" constant="4" id="zGl-Go-fmF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="seeMoreView" destination="Bmf-xj-uKT" id="2RZ-cc-L6Y"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="RLk-Yc-voL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mag-Y5-oOU" secondAttribute="trailing" id="EkA-ez-7BT"/>
+                            <constraint firstItem="Mag-Y5-oOU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Eoo-px-cT1"/>
+                            <constraint firstItem="Mag-Y5-oOU" firstAttribute="top" secondItem="LZ0-wc-F1P" secondAttribute="bottom" constant="16" id="IU6-cE-8qT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LZ0-wc-F1P" secondAttribute="trailing" id="JDH-AR-KzM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mbA-1m-kG7" secondAttribute="trailing" id="S7Z-YW-Toc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mag-Y5-oOU" secondAttribute="bottom" id="a26-8l-bCB"/>
+                            <constraint firstItem="mbA-1m-kG7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aUp-gA-Qpe"/>
+                            <constraint firstItem="LZ0-wc-F1P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iRa-KU-fww"/>
+                            <constraint firstItem="mbA-1m-kG7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="o87-JA-oHG"/>
+                            <constraint firstItem="LZ0-wc-F1P" firstAttribute="top" secondItem="mbA-1m-kG7" secondAttribute="bottom" constant="16" id="yxv-gv-yZO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="SeeMore List View" id="MqX-W0-faT"/>
+                    <connections>
+                        <outlet property="tableView" destination="Mag-Y5-oOU" id="L6u-2t-qdh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895.41984732824426" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lCl-yf-xnM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PXn-aR-ASH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tOE-LF-fIh">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KfS-To-Zxy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="deb-Ho-wik" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31.297709923664122" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
